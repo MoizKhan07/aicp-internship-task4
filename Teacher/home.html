@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <button style="position: absolute; top: 20px; right: 20px; background-color: white; color: black;"><a href="../../Task4/welcomepage.html">logout</a></button>
+        <div class="request-book-form">
+            <h2 style="color: black;">Request Book</h2>
+            <form action="process_request.php" method="POST">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter your username" required>
+                <label for="book-id">Book ID</label>
+                <input type="text" name="book-id" id="book-id" placeholder="Enter the book ID" required>
+                <label for="request-type">Request Type</label>
+                <select name="request-type" id="request-type">
+                    <option value="borrow">Borrow</option>
+                    <option value="return">Return</option>
+                </select>
+                <button type="submit">Submit Request</button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <div class="books-list">
+            <h2>Available Books</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Pages</th>
+                        <th>Publisher</th>
+                        <th>Author</th>
+                        <th>Edition</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The Catcher in the Rye</td>
+                        <td>277</td>
+                        <td>Little, Brown and Company</td>
+                        <td>J.D. Salinger</td>
+                        <td>Reissue Edition</td>
+                    </tr>
+                    <tr>
+                        <td>1984</td>
+                        <td>328</td>
+                        <td>Secker & Warburg</td>
+                        <td>George Orwell</td>
+                        <td>First Edition</td>
+                    </tr>
+                    <tr>
+                        <td>To Kill a Mockingbird</td>
+                        <td>281</td>
+                        <td>J.B. Lippincott & Co.</td>
+                        <td>Harper Lee</td>
+                        <td>50th Anniversary Edition</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="currently-borrowed-books">
+            <h2>Currently Borrowed Books</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book ID</th>
+                        <th>Book Title</th>
+                        <th>Borrow Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>201</td>
+                        <td>The Catcher in the Rye</td>
+                        <td>2024-09-01</td>
+                    </tr>
+                    <tr>
+                        <td>202</td>
+                        <td>1984</td>
+                        <td>2024-09-05</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="returned-books">
+            <h2>Returned Books</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book ID</th>
+                        <th>Book Title</th>
+                        <th>Return Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>203</td>
+                        <td>To Kill a Mockingbird</td>
+                        <td>2024-08-10</td>
+                    </tr>
+                    <tr>
+                        <td>204</td>
+                        <td>The Great Gatsby</td>
+                        <td>2024-08-18</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
